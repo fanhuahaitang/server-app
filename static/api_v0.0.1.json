@@ -1,0 +1,83 @@
+{
+  "info": {
+    "title": "Server-App API Doc",
+    "description": "服务器应用程序的API文档",
+    "version": "0.0.1"
+  },
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "服务器状态API",
+      "description": "用来访问操作服务器状态的API"
+    },
+    {
+      "name": "服务器信息API",
+      "description": "用来访问操作服务器信息的API"
+    },
+    {
+      "name": "服务器数据API",
+      "description": "用来访问操作服务器数据的API"
+    }
+  ],
+  "swagger": "2.0",
+  "paths": {
+    "/status": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Failure"
+          }
+        },
+        "parameters": [],
+        "summary": "服务器在线状态",
+        "description": "",
+        "tags": [
+          "服务器状态API"
+        ]
+      }
+    },
+    "/version": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "version": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Failure"
+          }
+        },
+        "parameters": [],
+        "summary": "服务器版本信息",
+        "description": "",
+        "tags": [
+          "服务器信息API"
+        ]
+      }
+    }
+  }
+}
